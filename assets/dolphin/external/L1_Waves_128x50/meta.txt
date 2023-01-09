@@ -11,12 +11,12 @@ Frame rate: 2
 Duration: 3600
 Active cooldown: 5
 
-Bubble slots: 3
+Bubble slots: 2
 
 Slot: 0
 X: 1
 Y: 17
-Text: I am happy,\nmy friend!
+Text: Wassup Pz!?
 AlignH: Right
 AlignV: Bottom
 StartFrame: 3
@@ -25,7 +25,7 @@ EndFrame: 9
 Slot: 1
 X: 1
 Y: 17
-Text: So long and\nthanks for\nall the fish!
+Text: How u doin' today?
 AlignH: Right
 AlignV: Center
 StartFrame: 3
@@ -34,7 +34,7 @@ EndFrame: 9
 Slot: 2
 X: 1
 Y: 25
-Text: I wish I could
+Text: I just fcking finished...
 AlignH: Right
 AlignV: Bottom
 StartFrame: 3
@@ -43,7 +43,7 @@ EndFrame: 5
 Slot: 2
 X: 1
 Y: 25
-Text: swim all day
+Text: i cracked the damn mifare u gave me
 AlignH: Right
 AlignV: Bottom
 StartFrame: 6

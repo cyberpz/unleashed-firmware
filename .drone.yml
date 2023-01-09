@@ -56,25 +56,6 @@ steps:
       FBT_TOOLS_CUSTOM_LINK:
         from_secret: fbt_link
 
-  - name: "Build with ofw anims"
-    image: hfdj/fztools
-    pull: never
-    commands:
-      - rm -f assets/dolphin/external/manifest.txt
-      - cp .ci_files/anims_ofw.txt assets/dolphin/external/manifest.txt
-      - rm -rf assets/resources/apps/
-      - export DIST_SUFFIX=${DRONE_TAG}n
-      - export WORKFLOW_BRANCH_OR_TAG=no-custom-anims
-      - export FORCE_NO_DIRTY=yes
-      - rm -f build/f7-firmware-C/toolbox/version.*
-      - ./fbt COMPACT=1 DEBUG=0 updater_package
-      - mkdir artifacts-ofw-anims
-      - mv dist/f7-C/* artifacts-ofw-anims/
-      - ls -laS artifacts-ofw-anims
-      - ls -laS artifacts-ofw-anims/f7-update-${DRONE_TAG}n
-    environment:
-      FBT_TOOLS_CUSTOM_LINK:
-        from_secret: fbt_link
 
   - name: "Bundle self-update packages"
     image: kramos/alpine-zip
