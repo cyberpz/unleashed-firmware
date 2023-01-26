@@ -22,16 +22,17 @@ Our goal is to make all features possible on this device without any limitations
 * Unlocked all Animations from Level 1 
 * Prioritized Level 3 animations
 * 3 new custom animations and prioritized 
-* Device name changed 
+* Passport - Device name changed 
+* Frequency Analyzer - removed non-EU frequencies
 
 # Personal Disclaimer
-Prior Flipper experience is suggested before compiling and flashing this firmware, i don't wont to ruin the experience Flipper created and which you deserve.
+Prior Flipper experience is suggested before compiling and flashing this firmware, i don't wont to ruin the experience Flipper created and which you deserve, even if you can also find a lot of different forks online, Guidoz listed em all [here]()
 
 <br>
 
-## How to change name
-After cloning Unleashed or this repo:
-1. Go to file: `/firmware/targets/f7/furi_hal/furi_hal_version.c`
-2. Find this line: `return *furi_hal_version.name == 0x00 ? `
-3. On the line found: edit the string after semicolor, the new string has LIMITATION of 8 characters.
+## How to change flipper name
+After forking any repo:
+1. Go to file: `lib/toolbox/version.c`
+2. Find this line: `.custom_flipper_name`
+3. On the line found: edit the `NULL` value into a string (ex. "cyber.pz", use double-quotes).
 4. [Build](https://github.com/DarkFlippers/unleashed-firmware/blob/dev/documentation/HowToBuild.md) and [install](https://github.com/DarkFlippers/unleashed-firmware/blob/dev/documentation/HowToInstall.md)
