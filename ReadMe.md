@@ -108,7 +108,6 @@ You can support us by using links or addresses below:
 - ESP8266 Deauther plugin [(by SequoiaSan)](https://github.com/SequoiaSan/FlipperZero-Wifi-ESP8266-Deauther-Module)
 - WiFi Scanner plugin [(by SequoiaSan)](https://github.com/SequoiaSan/FlipperZero-WiFi-Scanner_Module)
 - MultiConverter plugin [(by theisolinearchip)](https://github.com/theisolinearchip/flipperzero_stuff)
-- USB Keyboard plugin [(by huuck)](https://github.com/huuck/FlipperZeroUSBKeyboard)
 - WAV Player [(OFW: DrZlo13)](https://github.com/flipperdevices/flipperzero-firmware/tree/zlo/wav-player) - Fixed and improved by [LTVA1](https://github.com/LTVA1/wav_player)
 - Barcode generator plugin [(original by McAzzaMan)](https://github.com/McAzzaMan/flipperzero-firmware/tree/UPC-A_Barcode_Generator/applications/barcode_generator) - [EAN-8 and refactoring](https://github.com/DarkFlippers/unleashed-firmware/pull/154) by @msvsergey
 - GPIO: Sentry Safe plugin [(by H4ckd4ddy)](https://github.com/H4ckd4ddy/flipperzero-sentry-safe-plugin)
@@ -185,10 +184,52 @@ Games:
 * Passport - Device name changed 
 * Frequency Analyzer - removed non-EU frequencies
 
-# Personal Disclaimer
-Prior Flipper experience is suggested before compiling and flashing this firmware, i don't wont to ruin the experience Flipper created and which you deserve, even if you can also find a lot of different forks online, Guidoz listed em all [here]()
+## [- [WiFi] Scanner - Web Flasher for module firmware](https://sequoiasan.github.io/FlipperZero-WiFi-Scanner_Module/)
+
+## [- [ESP8266] Deauther - Web Flasher for module firmware](https://sequoiasan.github.io/FlipperZero-Wifi-ESP8266-Deauther-Module/)
+
+## [- Windows: How to Upload .bin to ESP32/ESP8266](https://github.com/SequoiaSan/Guide-How-To-Upload-bin-to-ESP8266-ESP32)
+
+## [- How to use: [GPIO] SentrySafe plugin](https://github.com/DarkFlippers/unleashed-firmware/blob/dev/documentation/SentrySafe.md)
+
+### **Sub-GHz**
+
+## [- Transmission is blocked? - How to extend Sub-GHz frequency range](https://github.com/DarkFlippers/unleashed-firmware/blob/dev/documentation/DangerousSettings.md)
+
+## [- How to add extra Sub-GHz frequencies](https://github.com/DarkFlippers/unleashed-firmware/blob/dev/documentation/SubGHzSettings.md)
 
 <br>
+<br>
+
+# Where I can find IR, Sub-GHz, ... files, DBs, and other stuff?
+## [UberGuidoZ Playground - Large collection of files - Github](https://github.com/UberGuidoZ/Flipper)
+## [Awesome Flipper Zero - Github](https://github.com/djsime1/awesome-flipperzero)
+
+<br>
+<br>
+
+# Links
+
+* Unofficial Discord: [discord.unleashedflip.com](https://discord.unleashedflip.com)
+* Hello world - plugin tutorial (English): [https://github.com/DroomOne/Flipper-Plugin-Tutorial](https://github.com/DroomOne/Flipper-Plugin-Tutorial)
+* Hello world - plugin tutorial (in Russian): [https://yakovlev.me/hello-flipper-zero/](https://yakovlev.me/hello-flipper-zero/)
+* CLion IDE - How to setup workspace for flipper firmware development: [https://krasovs.ky/2022/11/01/flipper-zero-clion.html](https://krasovs.ky/2022/11/01/flipper-zero-clion.html)
+* Docs by atmanos / How to write your own app (outdated API): [https://flipper.atmanos.com/docs/overview/intro](https://flipper.atmanos.com/docs/overview/intro)
+
+* Official Docs: [http://docs.flipperzero.one](http://docs.flipperzero.one)
+* Official Forum: [forum.flipperzero.one](https://forum.flipperzero.one/)
+
+# Project structure
+
+- `applications`    - Applications and services used in firmware
+- `assets`          - Assets used by applications and services
+- `furi`            - Furi Core: OS-level primitives and helpers
+- `debug`           - Debug tool: GDB-plugins, SVD-file and etc
+- `documentation`   - Documentation generation system configs and input files
+- `firmware`        - Firmware source code
+- `lib`             - Our and 3rd party libraries, drivers and etc...
+- `site_scons`      - Build helpers
+- `scripts`         - Supplementary scripts and python libraries home
 
 ## How to change flipper name
 After forking any repo:
