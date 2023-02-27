@@ -6,7 +6,7 @@ Version: 1
 # I set to weight=3 Level3 Animations and my favourites 
 # Custom Animations weight=12
 
-# Personal Pz Animation
+# Pz-Animation
 Name: PzCat
 Min butthurt: 0
 Max butthurt: 14
@@ -14,7 +14,7 @@ Min level: 1
 Max level: 3
 Weight: 12
 
-# Pz Space Invader Animation
+# Pz-Animation
 Name: Invader
 Min butthurt: 0
 Max butthurt: 14
@@ -22,7 +22,7 @@ Min level: 1
 Max level: 3
 Weight: 12
 
-# Pz Space Invader Animation
+# Pz-Animation
 Name: Spaceship
 Min butthurt: 0
 Max butthurt: 14
@@ -30,84 +30,14 @@ Min level: 1
 Max level: 3
 Weight: 12
 
-
-Name: L1_Waves_128x50
+# Pz-Animation
+Name: IO_matrix
 Min butthurt: 0
-Max butthurt: 5
-Min level: 1
-Max level: 3
-Weight: 1
-
-
-Name: L1_Sleep_128x64
-Min butthurt: 0
-Max butthurt: 10
-Min level: 1
-Max level: 3
-Weight: 1
-
-Name: L1_Recording_128x51
-Min butthurt: 0
-Max butthurt: 8
-Min level: 1
-Max level: 1
-Weight: 1
-
-Name: L1_Furippa1_128x64
-Min butthurt: 0
-Max butthurt: 6
-Min level: 1
-Max level: 1
-Weight: 1
-
-Name: L1_Read_books_128x64
-Min butthurt: 0
-Max butthurt: 8
-Min level: 1
-Max level: 1
-Weight: 1
-
-Name: L1_Cry_128x64
-Min butthurt: 8
-Max butthurt: 13
-Min level: 1
-Max level: 3
-Weight: 1
-
-Name: L1_Boxing_128x64
-Min butthurt: 10
-Max butthurt: 13
-Min level: 1
-Max level: 3
-Weight: 1
-
-Name: L1_Mad_fist_128x64
-Min butthurt: 9
-Max butthurt: 13
-Min level: 1
-Max level: 3
-Weight: 1
-
-Name: L1_Mods_128x64
-Min butthurt: 0
-Max butthurt: 9
-Min level: 1
-Max level: 3
-Weight: 1
-
-Name: L1_Painting_128x64
-Min butthurt: 0
-Max butthurt: 7
-Min level: 1
-Max level: 3
-Weight: 1
-
-Name: L1_Leaving_sad_128x64
-Min butthurt: 14
 Max butthurt: 14
 Min level: 1
 Max level: 3
-Weight: 1
+Weight: 12
+
 
 Name: L2_Wake_up_128x64
 Min butthurt: 0
@@ -158,12 +88,6 @@ Min level: 1
 Max level: 3
 Weight: 4
 
-Name: L1_Sleigh_ride_128x64
-Min butthurt: 0
-Max butthurt: 14
-Min level: 1
-Max level: 3
-Weight: 1
 
 Name: L3_Fireplace_128x64
 Min butthurt: 0
