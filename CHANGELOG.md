@@ -1,23 +1,11 @@
 ### New changes
-* If you have copied apps into `apps` folder - remove `apps` folder on your microSD before installing this release to avoid issues!
-* SubGHz: Default custom buttons layout for non standard remotes (for example your remote has broken buttons and transmit only 0xC, now you can use other buttons)
-* SubGHz: Fix issues with external module 5v power (now all works automatically, enabling +5v manually not required) (**Only for modules that work with 5v->3.3v converter!!!!!**)
-* SubGHz: Fix and update subghz protocols to use new error system
-* SubGHz: Fix default frequency being overwritten bug (Add manually fixes)
-* SubGHz: Fix 464Mhz and (390MHz for external module only) was showing up in Frequency analyzer all the time due to noise
-* iButton: Fix ibutton app - add manually - duplicate names
-* Plugins: Properly rename unirf remix to subghz remote - And automatically migrate user files to new folder (unirf -> subghz_remote)
-* Plugins: Fix unirf freeze (protocol deserialize status ok) (by @Willy-JL | PR #375)
-* Plugins: Blackjack game: fix bug counting more than one ace (by @403-Fruit | PR #374)
-* Plugins: Update POCSAG Pager app to new error system
-* Plugins: Update iButton Fuzzer to new iButton system
-* OFW: Archive browser: update path on dir leave 
-* OFW: SubGhz: better and more verbose error handling in protocols, stricter CAME validation -> **Breaking API change, api was changed from 16.x to 17.x** 
-* OFW: iButton system and app refactoring (+new protocols) -> **Breaking API change, api was changed from 15.x to 16.x** 
-**(this will make your manually copied plugins not work, update them in same way you installed them, or delete `apps` folder and then install firmware, if you using extra pack builds (with `e` in version) all apps in _Extra will be updated automatically)**
-
-* OFW: New pin reset splashscreen
-* OFW: Getter for application data path
+* iButton: Add support for DS1420 (not fully tested)
+* Desktop: Option to set Tertiary favourite app (Hold right arrow on desktop) - **Desktop settings (pin code, favourite app, autolock time) will be resetted!!! Only one time after installing - due to changes in settings structure, after installing of this release desktop settings will not be reset with next release**
+* Desktop: Ability to disable favourite app (use last element in a main list `None (disable)`)
+* Desktop: Fix issue #387 (Ok button was showing invalid file error in dummy mode)
+* OFW PR: SD Driver: reinit sd card on error (by DrZlo13 | OFW PR 2493)
+* OFW PR: iButton -> Fix a typo: use right shift instead of greater than (by gsurkov | OFW PR 2506)
+* OFW: Optimize trailing slash check
 
 #### [🎲 Download latest extra apps pack](https://github.com/xMasterX/unleashed-extra-pack/archive/refs/heads/main.zip)
 
@@ -26,7 +14,7 @@
 [-> Download qFlipper (official link)](https://flipperzero.one/update)
 
 ## Please support development of the project
-* Boosty: https://boosty.to/mmxdev
+* **Boosty** (patreon alternative): https://boosty.to/mmxdev
 * Ko-Fi: https://ko-fi.com/masterx
 * cloudtips (only RU payments accepted): https://pay.cloudtips.ru/p/7b3e9d65
 * YooMoney (only RU payments accepted): https://yoomoney.ru/fundraise/XA49mgQLPA0.221209
