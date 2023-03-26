@@ -1,13 +1,20 @@
 ### New changes
-* iButton: Add support for DS1420 (not fully tested)
-* Desktop: Option to set Tertiary favourite app (Hold right arrow on desktop) - **Desktop settings (pin code, favourite app, autolock time) will be resetted!!! Only one time after installing - due to changes in settings structure, after installing of this release desktop settings will not be reset with next release**
-* Desktop: Ability to disable favourite app (use last element in a main list `None (disable)`)
-* Desktop: Fix issue #387 (Ok button was showing invalid file error in dummy mode)
-* OFW PR: SD Driver: reinit sd card on error (by DrZlo13 | OFW PR 2493)
-* OFW PR: iButton -> Fix a typo: use right shift instead of greater than (by gsurkov | OFW PR 2506)
-* OFW: Optimize trailing slash check
+* If you have copied apps into `apps` folder - remove `apps` folder on your microSD before installing this release to avoid issues!
+* Dev Builds: Add extra pack dev branch to avoid "bug" reports with `API mismatch`
+* App Loader: Add option to ignore api mismatch (warning! some apps WILL not work, please update them to avoid any issues) -> (by @Willy-JL | PR #395)
+* SubGHz: Add manually -> GSN protocol support
+* SubGHz: Add 318 and 418 MHz back to hopping list
+* SubGHz: Fix hopper stuck at 433.42 due to wide range signals - 
+When we using 433.92 remote flipper in hopping mode will stuck at 433.42 and may loose signal because of that, need to avoid using close freqs in hopping, only freqs with bigger difference like 310 -> 315
+* Plugins: Update **TOTP (Authenticator)** [(by akopachov)](https://github.com/akopachov/flipper-zero_authenticator) -> BadBT Support
+* OFW: Screen streaming improvements
+* OFW: 1-Wire Overdrive Mode -> **Breaking API change, api was changed from 19.x to 20.x** 
+* OFW: Disable UART IRQs by default
+* OFW: BadUSB: implement boot protocol
+* OFW: Remove hmac_sha256 from public API -> **Breaking API change, api was changed from 18.x to 19.x** 
+**(this will make your manually copied plugins not work, update them in same way you installed them, or delete `apps` folder and then install firmware, if you using extra pack builds (with `e` in version) all apps in _Extra will be updated automatically)**
 
-#### [🎲 Download latest extra apps pack](https://github.com/xMasterX/unleashed-extra-pack/archive/refs/heads/main.zip)
+#### [🎲 Download latest extra apps pack](https://github.com/xMasterX/all-the-plugins/archive/refs/heads/main.zip)
 
 [-> How to install firmware](https://github.com/DarkFlippers/unleashed-firmware/blob/dev/documentation/HowToInstall.md)
 
