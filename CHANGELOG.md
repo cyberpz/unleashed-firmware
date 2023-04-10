@@ -1,18 +1,18 @@
 ### New changes
-* If you have copied apps into `apps` folder - remove `apps` folder on your microSD before installing this release to avoid issues!
-* Dev Builds: Add extra pack dev branch to avoid "bug" reports with `API mismatch`
-* App Loader: Add option to ignore api mismatch (warning! some apps WILL not work, please update them to avoid any issues) -> (by @Willy-JL | PR #395)
-* SubGHz: Add manually -> GSN protocol support
-* SubGHz: Add 318 and 418 MHz back to hopping list
-* SubGHz: Fix hopper stuck at 433.42 due to wide range signals - 
-When we using 433.92 remote flipper in hopping mode will stuck at 433.42 and may loose signal because of that, need to avoid using close freqs in hopping, only freqs with bigger difference like 310 -> 315
-* Plugins: Update **TOTP (Authenticator)** [(by akopachov)](https://github.com/akopachov/flipper-zero_authenticator) -> BadBT Support
-* OFW: Screen streaming improvements
-* OFW: 1-Wire Overdrive Mode -> **Breaking API change, api was changed from 19.x to 20.x** 
-* OFW: Disable UART IRQs by default
-* OFW: BadUSB: implement boot protocol
-* OFW: Remove hmac_sha256 from public API -> **Breaking API change, api was changed from 18.x to 19.x** 
-**(this will make your manually copied plugins not work, update them in same way you installed them, or delete `apps` folder and then install firmware, if you using extra pack builds (with `e` in version) all apps in _Extra will be updated automatically)**
+* **SubGHz: Keyboard lock fixed**
+### Previous changes
+* SubGHz: AN-Motors AT4 - Add manually fixes
+* SubGHz: StarLine ignore option (in Read -> Config) (by @gid9798 | PR #410)
+* Plugins: Fix `Repeat: 200` bug in SubGHz Remote and Bruteforcer
+* Plugins: Update **TOTP (Authenticator)** [(by akopachov)](https://github.com/akopachov/flipper-zero_authenticator) (Steam guard support)
+* Plugins: Update **UART Terminal** [(by cool4uma)](https://github.com/cool4uma/UART_Terminal/tree/main) (AT commands support)
+* Plugins: Add IR Scope app. (by @kallanreed | PR #407)
+* OFW: scripts: sconsdist: added stub file artifact for older ufbt 
+* OFW: Graphics cleanup and icon rotation
+* OFW: Moved ufbt to fbt codebase
+* OFW: SD Driver: do not cache sd status.
+* OFW: Furi: more gpio checks in HAL
+* OFW: WeatherStation: fix protocol TX141TH-BV2
 
 #### [🎲 Download latest extra apps pack](https://github.com/xMasterX/all-the-plugins/archive/refs/heads/main.zip)
 
