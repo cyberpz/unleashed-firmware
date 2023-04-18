@@ -9,7 +9,9 @@
 **This firmware is a fork from** [DarkFlippers/unleashed-firmware](https://github.com/DarkFlippers/unleashed-firmware)
 
 <br>
-Our goal is to make all features possible on this device without any limitations! 
+
+Most stable custom firmware focused on new features and improvements of original firmware components, with almost no UI changes
+
 <br>
 
 ### This software is for experimental purposes only and is not meant for any illegal activity/purposes. <br> We do not condone illegal activity and strongly encourage keeping transmissions to legal/valid uses allowed by law. <br> Also, this software is made without any support from Dark Flippers and is in no way related to the official devs. 
@@ -95,7 +97,7 @@ Encoders made by @assasinfil & @xMasterX:
 
 ## Please support development of the project
 The majority of this project is developed and maintained by me, @xMasterX.
-I'm unemployed because of the war, and the only income I receive is from your donations.
+I'm unemployed, and the only income I receive is from your donations.
 Our team is small and the guys are working on this project as much as they can solely based on the enthusiasm they have for this project and the community.
 - @assasinfil - SubGHz
 - @Svaarich - UI design and animations
