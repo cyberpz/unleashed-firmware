@@ -369,7 +369,7 @@ bool subghz_frequency_analyzer_input(InputEvent* event, void* context) {
 #endif
 
         if(updated) {
-            instance->callback(SubGhzCustomEventViewReceiverOK, instance->context);
+            instance->callback(SubGhzCustomEventViewFreqAnalOkShort, instance->context);
         }
 
         // First device receive short, then when user release button we get long
@@ -382,7 +382,7 @@ bool subghz_frequency_analyzer_input(InputEvent* event, void* context) {
                 subghz_frequency_analyzer_worker_stop(instance->worker);
             }
 
-            instance->callback(SubGhzCustomEventViewReceiverUnlock, instance->context);
+            instance->callback(SubGhzCustomEventViewFreqAnalOkLong, instance->context);
         }
     }
 
