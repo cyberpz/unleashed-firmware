@@ -1,14 +1,32 @@
-### New changes 
-* NFC: Temp fix for Detect reader not collecting nonces
-* Desktop: Temp fix for old backlight bug when locking by holding up arrow
-* IR: Add Sharp and Vizio to Universal TV remote
-* BLE Info: Show version instead of branch
-* Plugins: Add new game - Bomberduck (by @leo-need-more-coffee | PR #450)
-* Plugins: Fix `SWD Probe` plugin GPIO pins state reset on exit
-* Plugins: Bluetooth Remote - new UI (by @krolchonok | PR #447)
-* Plugins: Update **TOTP (Authenticator)** [(by akopachov)](https://github.com/akopachov/flipper-zero_authenticator)
-* Docs: Update HowToInstall (by @krolchonok | PR #443)
-* OFW PR 2627: Add HID mouse auto-clicker (by @rwl4)
+### New changes
+* **Warning! After installing, Desktop settings (Favoutite apps, PIN Code, AutoLock time..) will be resetted to default due to OFW changes, Please set your PIN code, Favourite apps again in Settings->Desktop**
+* New way of changing device name -> **Now can be changed in Settings->Desktop** (by @xMasterX and @Willy-JL)
+* Plugins: BadBT plugin (BT version of BadKB) [(by Willy-JL, ClaraCrazy, XFW contributors)](https://github.com/ClaraCrazy/Flipper-Xtreme/tree/dev/applications/main/bad_kb)
+* Plugins: WiFi Marauder -> Added sniff pmkid on selected aps from 0.10.4 update (by @clipboard1)
+* Plugins: SubGHz Bruteforcer -> Increase delay just a little bit to fix some cases when receiver will not get codes and decrease manual transmit delay
+* Plugins: UART Terminal -> Fix crashes on plugin load with RX connected
+* SubGHz: App refactoring (OFW code ported + our code was refactored/cleaned up too) (by @gid9798 and @xMasterX | PR #461)
+* SubGHz: Using scene manager functions in DecodeRAW (by @gid9798 | PR #462)
+* SubGHz: Protocols and custom buttons refactoring (by @gid9798 | PR #465)
+* SubGHz: Move `counter increase` setting out of debug, change max value
+* GUI: Submenu locked elements (by @Willy-JL and @giacomoferretti)
+* GUI: Text Input improvements, added cursor and ability to set minimal length (by @Willy-JL)
+* BT API: Functions that allow to change bt mac address and device broadcasted name (by @Willy-JL and XFW contributors)
+* Infrared: `External output` move out of debug and add power option for external modules
+* Extra pack: Some app fixes
+* OFW: fix PIN retry count reset on reboot 
+* OFW: fbt: allow strings for fap_version field in app manifests
+* OFW: Rpc: add desktop service. Desktop: refactor locking routine. **Now PIN lock is actually cannot be bypassed by reboot!** / **Desktop settings will be reset, please set your PIN and favourite apps again!**
+* OFW: Part 2 of hooking C2 IPC
+* OFW: ble: attempt to handle hardfaulted c2
+* OFW: Add Mfkey32 application
+* OFW: Added DigitalSequence and PulseReader
+* OFW: Debug: revert cortex debug to lxml and drop DWT **(reapply your VSCode launch.json from example folder)**
+* OFW: furi_crash: added C2 status; added fw-version gdb command
+* OFW: Removed STM32CubeWB module
+* OFW: API version in UI
+* OFW: ufbt: deploying sample ufbt automation for new apps; added `source "ufbt -s env"` for toolchain access
+* OFW: Fix storage.py exist_dir logic
 
 #### [🎲 Download latest extra apps pack](https://github.com/xMasterX/all-the-plugins/archive/refs/heads/main.zip)
 
