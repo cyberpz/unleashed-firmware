@@ -170,6 +170,16 @@ static const FlipperInternalApplication* loader_find_application_by_name(const c
     return application;
 }
 
+static const char* loader_find_external_application_by_name(const char* app_name) {
+    for(size_t i = 0; i < FLIPPER_EXTERNAL_APPS_COUNT; i++) {
+        if(strcmp(FLIPPER_EXTERNAL_APPS[i].name, app_name) == 0) {
+            return FLIPPER_EXTERNAL_APPS[i].path;
+        }
+    }
+
+    return NULL;
+}
+
 static void loader_start_app_thread(Loader* loader, FlipperInternalApplicationFlag flags) {
     // setup heap trace
     FuriHalRtcHeapTrackMode mode = furi_hal_rtc_get_heap_track_mode();
@@ -273,7 +283,7 @@ static LoaderStatus loader_start_external_app(
                     DialogMessage* message = dialog_message_alloc();
                     dialog_message_set_header(
                         message, "API Mismatch", 64, 0, AlignCenter, AlignTop);
-                    dialog_message_set_buttons(message, "Cancel", NULL, "Continue");
+                    dialog_message_set_buttons(message, NULL, NULL, "Continue");
                     dialog_message_set_text(
                         message,
                         "This app might not\nwork correctly\nContinue anyways?",
@@ -284,6 +294,9 @@ static LoaderStatus loader_start_external_app(
                     if(dialog_message_show(dialogs, message) == DialogMessageButtonRight) {
                         status = loader_make_status_error(
                             LoaderStatusErrorApiMismatch, error_message, "API Mismatch");
+                    } else {
+                        status = loader_make_status_error(
+                            LoaderStatusErrorApiMismatchExit, error_message, "API Mismatch");
                     }
                     dialog_message_free(message);
                     furi_record_close(RECORD_DIALOGS);
@@ -406,6 +419,14 @@ static LoaderStatus loader_do_start_by_name(
             loader_do_applications_show(loader);
             status = loader_make_success_status(error_message);
             break;
+        }
+
+        // check External Applications
+        {
+            const char* path = loader_find_external_application_by_name(name);
+            if(path) {
+                name = path;
+            }
         }
 
         // check external apps
